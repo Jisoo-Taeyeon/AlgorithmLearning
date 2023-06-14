@@ -1,0 +1,809 @@
+{
+	"info": {
+		"_postman_id": "8a440f4d-0fb6-48df-ac7d-97f929719a8f",
+		"name": "资管平台",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "累计数据查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ams/allProfile/cumuData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ams",
+						"allProfile",
+						"cumuData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "余额变化",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/allProfile/balData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"allProfile",
+						"balData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "规模概况下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/allProfile/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"allProfile",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "渠道概况下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/allChannel/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"allChannel",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "资产分析按月日年查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220713\",\r\n        \"endDate\": \"20220830\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/asset/dist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"asset",
+						"dist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "资产分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220713\",\r\n        \"endDate\": \"20220830\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"M\",\r\n        \"dateType\": \"D\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/asset/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"asset",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "资产总表按月周查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/asset/distTotal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"asset",
+						"distTotal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "授信分析按照日周月查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"D\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/credit/analyse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"credit",
+						"analyse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "授信分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"W\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/credit/downloand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"credit",
+						"downloand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "进件分析按照日周月查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/yx/analyse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"yx",
+						"analyse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "进件分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/yx/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"yx",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "放款分析按照日周月下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"D\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/loan/analyse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"loan",
+						"analyse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "放款分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/loan/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"loan",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "活跃分析按照日周月查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"D\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/user/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"user",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "活跃分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"M\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/user/downloadActive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"user",
+						"downloadActive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "还款分析查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"W\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/repay/analyse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"repay",
+						"analyse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "还款分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"W\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/repay/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"repay",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "用户分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"pageNumber\": 1,\r\n    \"pageSize\": 10,\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"20220718\",\r\n    \"endDate\": \"20220817\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"dateType\": \"D\",\r\n    \"disType\": \"areaDis\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/user/downloadStart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"user",
+						"downloadStart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "风险分析查询",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"W\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/stat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "风险分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"head\": {\r\n        \"pageNumber\": 1,\r\n        \"pageSize\": 10,\r\n        \"org\": \"313882000012\",\r\n        \"userId\": \"manager\"\r\n    },\r\n    \"request\": {\r\n        \"startDate\": \"20220717\",\r\n        \"endDate\": \"20220816\",\r\n        \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n        \"productType\": \"S\",\r\n        \"dateType\": \"W\",\r\n        \"sortField\": \"\",\r\n        \"sortType\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadStart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadStart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "迁徙率下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"202108\",\r\n    \"endDate\": \"202208\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"dateType\": \"D\",\r\n    \"disType\": \"N\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadMigrationStat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadMigrationStat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "逾期分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"202108\",\r\n    \"endDate\": \"202208\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"dateType\": \"D\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadOverdueStat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadOverdueStat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "留存率分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"202108\",\r\n    \"endDate\": \"202208\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"dateType\": \"D\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadRetainStat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadRetainStat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vintage分析下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"pageNumber\": 1,\r\n    \"pageSize\": 10,\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"202108\",\r\n    \"endDate\": \"202208\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"dateType\": \"D\",\r\n    \"overdueDays\": \"30\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadVintageStat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadVintageStat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "收益率下载",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"head\": {\r\n    \"pageNumber\": 1,\r\n    \"pageSize\": 10,\r\n    \"org\": \"313882000012\",\r\n    \"userId\": \"manager\"\r\n  },\r\n  \"request\": {\r\n    \"startDate\": \"202108\",\r\n    \"endDate\": \"202208\",\r\n    \"productNo\": \"HBFQ,HBLY,WSD,WSDZT,JDJT,JDGS,BDZZLH,BDZZZD,WLD,XMXXD,MYJZT,MYJLY\",\r\n    \"productType\": \"S\",\r\n    \"overdueDays\": \"30\",\r\n    \"sortField\": \"\",\r\n    \"sortType\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:19288/ams/risk/downloadYieldStat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19288",
+					"path": [
+						"ams",
+						"risk",
+						"downloadYieldStat"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

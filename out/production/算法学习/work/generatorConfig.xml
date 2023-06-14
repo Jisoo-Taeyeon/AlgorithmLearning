@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 数据库驱动包位置 -->
+	<classPathEntry location="D:\tools\mysql-connector-java-5.1.29-bin.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<!-- type值为自定义的MyCommentGenerator -->
+		<commentGenerator
+			type="com.fintechervision.ams.web.controller.MyCommentGenerator">
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="false" />
+			<!-- 是否添加数据表中字段的注释 true：是 ： false:否 -->
+			<property name="addRemarkComments" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<!--useInformationSchema 实体类上添加数据表的注释 -->
+		<!-- connectionURL="jdbc:mysql://114.80.23.154:15594/dasdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;nullCatalogMeansCurrent=true" -->
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+
+			connectionURL="jdbc:mysql://10.10.1.107:3306/dasdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false&amp;nullCatalogMeansCurrent=true"
+			userId="root" password="2wsx@WSX">
+			<property name="useInformationSchema" value="true" />
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.fintechervision.ams.web.entity"
+			targetProject="D:\workspace\ams\src\main\java">
+			<!-- 是否允许子包 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 是否清理从数据库中查询出的字符串左右两边的空白字符 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 生成的映射文件包名和位置 -->
+		<sqlMapGenerator targetPackage="mapping"
+			targetProject="D:\workspace\ams\src\main\\resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.fintechervision.ams.web.dao" targetProject="D:\workspace\ams\src\main\java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<!-- &lt;!&ndash; 要生成那些表(更改tableName和domainObjectName就可以) &ndash;&gt; <table 
+			tableName="TM_COMMON_LOAN_CALC" domainObjectName="TmCommonLoanCalc" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false"> &lt;!&ndash; 下面2个根据实际情况选填 &ndash;&gt; &lt;!&ndash; 
+			<ignoreColumn column="update_time"/> <columnOverride column="is_deleted" 
+			property="deleted" javaType="java.lang.Boolean"/> &ndash;&gt; </table> -->
+		<!--数据库 -->
+		<!-- <table tableName="TM_AMS_SCALE_PROFILE" domainObjectName="TmAmsScaleProfile" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false"> </table> <table 
+			tableName="TM_AMS_CHANNEL_PROFILES" domainObjectName="TmAmsChannelProfiles" 
+			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+			enableSelectByExample="false" selectByExampleQueryId="false"> </table> -->
+
+        <!-- 
+		<table tableName="TM_AMS_SCALE_PROFILE" domainObjectName="TmAmsScaleProfile"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_CHANNEL_PROFILES" domainObjectName="TmAmsChannelProfiles"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table> 
+
+		<table tableName="TM_AMS_ASSET_ANALYSIS_ASSET_DIS"
+			domainObjectName="TmAmsAssetAnalysisAssetDis" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_ASSET_ANALYSIS_INTEREST_RATE_DIS"
+			domainObjectName="TmAmsAssetAnalysisInterestRateDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_ASSET_ANALYSIS_LOAN_TERM_DIS"
+			domainObjectName="TmAmsAssetAnalysisLoanTermDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_ASSET_ANALYSIS_TOTAL" domainObjectName="TmAmsAssetAnalysisTotal"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_LOAN_ANALYSIS" domainObjectName="TmAmsLoanAnalysis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_LOAN_INTEREST_RATE_DIS"
+			domainObjectName="TmAmsLoanInterestRateDis" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_LOAN_STATE_DIS" domainObjectName="TmAmsLoanStateDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_LOAN_TERM_DIS" domainObjectName="TmAmsLoanTermDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+	
+		<table tableName="TM_AMS_REPAY_AMT_TYPE_DIS" domainObjectName="TmAmsRepayAmtTypeDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_REPAY_ANALYSIS" domainObjectName="TmAmsRepayAnalysis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_REPAY_TYPE_DIS" domainObjectName="TmAmsRepayTypeDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_REPAY_WAY_DIS" domainObjectName="TmAmsRepayWayDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+
+		<table tableName="TM_AMS_SX_ANALYSE" domainObjectName="TmAmsSxAnalyse"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_SX_REFUSE_REASON_DIS" domainObjectName="TmAmsSxRefuseReasonDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_SX_RESULT_DIS" domainObjectName="TmAmsSxResultDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_SX_USER_LEVEL_DIS" domainObjectName="TmAmsSxUserLevelDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_TOTAL_ASSETS" domainObjectName="TmAmsTotalAssets"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		
+	 	
+		<table tableName="TM_AMS_YX_AMOUNT_DIS" domainObjectName="TmAmsYxAmountDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_YX_ANALYSE" domainObjectName="TmAmsYxAnalyse"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_YX_INTEREST_RATE_DIS" domainObjectName="TmAmsYxInterestRateDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="TM_AMS_YX_LOAN_TERM_DIS" domainObjectName="TmAmsYxLoanTermDis"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+ -->
+
+
+<!-- 
+<table tableName="TM_AMS_ACTIVE_ANALYSIS" domainObjectName="TmAmsActiveAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_GARDEN_DIS" domainObjectName="TmAmsGardenDis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_MIGRATION_RATE_NETROLL_ANALYSIS" domainObjectName="TmAmsMigrationRateNetrollAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_MIGRATION_RATE_ROLLBACK_ANALYSIS" domainObjectName="TmAmsMigrationRateRollbackAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_NEEDCLAIMS_ANALYSIS" domainObjectName="TmAmsNeedclaimsAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_REPAYMENT_OVERDUE_ANALYSIS" domainObjectName="TmAmsRepaymentOverdueAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_RETAIN_RATE_ANALYSIS" domainObjectName="TmAmsRetainRateAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_RISK_ANALYSIS" domainObjectName="TmAmsRiskAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_USER_AGE_DIS" domainObjectName="TmAmsUserAgeDis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_USER_AREA_DIS" domainObjectName="TmAmsUserAreaDis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_USER_LEVEL_DIS" domainObjectName="TmAmsUserLevelDis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_VINTAGE_ANALYSIS" domainObjectName="TmAmsVintageAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_YIELD_ANALYSIS" domainObjectName="TmAmsYieldAnalysis" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_SYSTEM_COLUMN_PROFILE" domainObjectName="TmAmsSystemColumnProfile" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+   
+
+   
+<table tableName="TM_AMS_ACL_RESOURCE" domainObjectName="TmAmsAclResource" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_ACL_ROLE" domainObjectName="TmAmsAclRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_ACL_ROLE_RESOURCE" domainObjectName="TmAmsAclRoleResource" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_ACL_USER" domainObjectName="TmAmsAclUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="TM_AMS_ACL_USER_ROLE" domainObjectName="TmAmsAclUserRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+ -->
+
+<table tableName="TM_DAS_BATCH_STATUS" domainObjectName="TmDasBatchStatus" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+   
+	</context>
+</generatorConfiguration>
