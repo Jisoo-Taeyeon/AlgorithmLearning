@@ -19,6 +19,7 @@ public class Demo02 {
 
 //        Teacher teacher1 = new Teacher("zhangsan", 2);
 //        Teacher teacher = new Teacher("zhangsan", 2);
+
 //        System.out.println(teacher == teacher1);
 //        System.out.println(teacher.equals(teacher1));
 //        int a=10;
